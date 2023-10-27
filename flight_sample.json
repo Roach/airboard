@@ -1,0 +1,11 @@
+
+{ 
+    "now" : 1698391921.6,
+  "messages" : 490258,
+  "aircraft" : [
+    {"hex":"ab7db3","flight":"NJZ2    ","alt_baro":10900,"alt_geom":11300,"gs":259.6,"track":43.6,"geom_rate":-1792,"squawk":"4266","emergency":"none","category":"A1","lat":39.411171,"lon":-119.834839,"nic":9,"rc":75,"seen_pos":10.4,"version":2,"nic_baro":0,"nac_p":10,"nac_v":2,"sil":3,"sil_type":"perhour","gva":2,"sda":2,"mlat":[],"tisb":[],"messages":42,"seen":4.6,"rssi":-20.2} ,
+    {"hex":"a61d00","alt_baro":12625,"alt_geom":13100,"gs":290.9,"track":49.7,"baro_rate":-832,"nav_qnh":1020.0,"nav_altitude_mcp":7392,"version":0,"nic_baro":1,"nac_p":8,"nac_v":1,"sil":2,"sil_type":"unknown","mlat":[],"tisb":[],"messages":13,"seen":0.2,"rssi":-19.7},
+    {"hex":"ab7db3","category":"A1","version":2,"sil_type":"perhour","mlat":[],"tisb":[],"messages":96,"seen":254.8,"rssi":-19.6},
+    {"hex":"a61d00","flight":"UAL2176 ","alt_baro":11500,"alt_geom":11700,"gs":211.9,"track":17.6,"baro_rate":-1088,"squawk":"4566","emergency":"none","category":"A3","nav_qnh":1020.0,"nav_altitude_mcp":7392,"lat":39.636018,"lon":-119.993103,"nic":8,"rc":186,"seen_pos":53.6,"version":2,"nic_baro":1,"nac_p":9,"nac_v":1,"sil":3,"sil_type":"perhour","gva":2,"sda":2,"mlat":[],"tisb":[],"messages":141,"seen":49.9,"rssi":-18.0}
+  ]
+}

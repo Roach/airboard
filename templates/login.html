@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/styles/login.css')}}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono">
+    </head>
+    <body class="container_login">
+        <div class='flex_column'>
+            <div class="flex heading_div">
+                <img src="../static/images/flyover.png" alt="workos logo">
+                <h1>Recent Flyovers</h1>
+            </div>
+            <div class="flex heading_div">
+                <a class="button login_button" href="{{ url_for('auth') }}">Login</a>
+            </div>
+        </div>
+    </body>
+</html>

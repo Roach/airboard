@@ -1,0 +1,44 @@
+body {
+    background: #000;
+    color: #f3f3f3;
+    font-family: 'Noto Sans Mono';
+    font-size: 3.5em;
+}
+.flight {
+    width: calc(100% - 20px);
+    margin:10px;
+    font-size: 1em;
+    text-transform:uppercase;
+    display: block;
+    float: left;
+    color:#e8e8e8;
+    background-image: linear-gradient(to bottom right, rgb(49, 49, 49), rgb(16, 16, 16));
+    border-radius: 10px;
+    line-height: 1em;
+}
+.flight p {
+    float: left;
+    padding: 10px;
+    margin: 5px;
+}
+.flight img {
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    height: 1em;
+}
+
+.content h1 {
+    font-size: 0.5em;
+    margin: 35px 0px 15px 25px;
+    text-decoration: none;
+    line-height: 1.5em;
+}
+
+.content h1 img {
+    margin-right: 20px;
+    display: block;
+    float: left;
+    height: 1.5em;
+    line-height: 1.5em;
+}

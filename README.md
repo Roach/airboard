@@ -1,23 +1,12 @@
----
-title: Flask
-description: A popular minimal server framework for Python
-tags:
-  - python
-  - flask
----
 
-# Python Flask Example
+# Airboard
 
-This is a [Flask](https://flask.palletsprojects.com/en/1.1.x/) app that serves a simple JSON response.
+A simple Flask app to render ADS-B data as a flight scxhedule board
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/zUcpux)
+![Airboard Flowchart](https://user-images.githubusercontent.com/32463/277907321-1d6a2bf7-8431-45aa-a6ea-64df6657faa4.png "Airboard Flowchart")
 
-## ✨ Features
 
-- Python
-- Flask
 
-## 💁‍♀️ How to use
+## Prerequisites
+- Python 3.9+
 
-- Install Python requirements `pip install -r requirements.txt`
-- Start the server for development `python3 main.py`

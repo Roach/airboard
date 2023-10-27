@@ -1,0 +1,7 @@
+{
+  "manufacturer": "Airbus",
+  "type": "A320",
+  "description": "twin-jet",
+  "engine_count": 2,
+  "engine_type": "jet"
+}
