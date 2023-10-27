@@ -10,11 +10,7 @@ from flask_jwt_extended import create_access_token, jwt_required, set_access_coo
 
 # Server configs
 DEBUG=False
-app = Flask(__name__,
-    static_url_path='/static', 
-    static_folder='/static',
-    template_folder='templates'
-)
+app = Flask(__name__)
 jwt = JWTManager(app)
 
 
