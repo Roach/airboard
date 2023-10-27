@@ -6,16 +6,17 @@ from dotenv import load_dotenv
 import workos
 import psycopg2
 import psycopg2.extras
-from whitenoise import WhiteNoise
-
 
 from flask import (Flask, redirect, render_template, make_response, request, url_for)
 from flask_jwt_extended import create_access_token, jwt_required, set_access_cookies, JWTManager
 
 # Server configs
 DEBUG=False
-app = Flask(__name__)
-app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/", prefix="static/")
+app = Flask(__name__,
+    static_url_path='/static', 
+    static_folder='/static',
+    template_folder='templates'
+)
 jwt = JWTManager(app)
 
 
