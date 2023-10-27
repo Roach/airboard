@@ -11,6 +11,7 @@ from flask import (Flask, redirect, render_template, make_response, request, url
 from flask_jwt_extended import create_access_token, jwt_required, set_access_cookies, JWTManager
 
 # Server configs
+DEBUG=False
 app = Flask(__name__)
 jwt = JWTManager(app)
 
