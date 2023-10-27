@@ -1,14 +1,11 @@
 import os
 import json
 from datetime import timedelta
-import flask
 from dotenv import load_dotenv
 import workos
 import psycopg2
 import psycopg2.extras
 from whitenoise import WhiteNoise
-
-
 from flask import (Flask, redirect, render_template, make_response, request, url_for)
 from flask_jwt_extended import create_access_token, jwt_required, set_access_cookies, JWTManager
 
@@ -23,7 +20,7 @@ jwt = JWTManager(app)
 load_dotenv()
 
 # WorkOS SSO setup
-workos.base_api_url = 'https://flask-production-7600.up.railway.app/' if DEBUG else workos.base_api_url
+workos.base_api_url = 'http://localhost:3000/' if DEBUG else workos.base_api_url
 workos.api_key = os.getenv('WORKOS_API_KEY')
 workos.client_id = os.getenv('WORKOS_CLIENT_ID')
 CUSTOMER_EMAIL_DOMAIN = os.getenv('WORKOS_CUSTOMER_EMAIL_DOMAIN')
