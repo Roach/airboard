@@ -5,7 +5,6 @@ import os
 import sqlite3
 from datetime import datetime, timedelta
 import httpx
-import json
 import psycopg2
 from dotenv import load_dotenv
 
@@ -209,18 +208,6 @@ def get_flight_record(flight_number):
     flight_db.commit()
     flight_db.close()
     return flight_data
-
-def get_recent_flights():
-    """    
-    Get the most recent N flight records
-    """
-    flight_db = sqlite3.connect("flights.db")
-    flight_db.row_factory = sqlite3.Row
-    recent_flights = flight_db.execute(
-        "SELECT * FROM airplanes order by seen_at desc limit 7;"
-    ).fetchall()
-    flight_db.close()
-    return recent_flights
 
 def get_airline_callsign(icao):
     """

@@ -1,8 +1,8 @@
-from datetime import timedelta
-from dotenv import load_dotenv
 import os
 import json
+from datetime import timedelta
 import flask
+from dotenv import load_dotenv
 import workos
 import psycopg2
 import psycopg2.extras
