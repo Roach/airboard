@@ -1,6 +1,7 @@
 from datetime import timedelta
 from dotenv import load_dotenv
 import os
+import json
 import flask
 import workos
 import psycopg2
@@ -82,6 +83,15 @@ def main():
     Redirect root to the main flights path
     """
     return redirect(url_for('flights'))
+
+# Healthcheck route
+@app.route('/health')
+def health():
+    """
+    Redirect root to the main flights path
+    """
+    return make_response(json.dumps({'message': 'Hello Railway!'}), 200)
+
 
 # Show main login page
 @app.route('/login')
