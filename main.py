@@ -80,7 +80,7 @@ def main():
     """
     Redirect root to the main flights path
     """
-    return redirect(url_for('flights'))
+    return make_response(redirect(url_for('flights')))
 
 # Healthcheck route
 @app.route('/health')
