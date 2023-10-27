@@ -135,7 +135,7 @@ def auth_callback():
 
 # Flight board route
 @app.route("/flights", methods=["GET"])
-@jwt_required()
+# @jwt_required()
 def flights():
     """
     Show airplane list
