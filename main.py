@@ -144,7 +144,7 @@ def flights():
     Requires a valid JWT for auth
     """
     flight_list = get_recent_flights()
-    return flask.render_template('flights.html', flights=flight_list)
+    return render_template('flights.html', flights=flight_list)
 
 # Start Flask
 if __name__ == '__main__':
