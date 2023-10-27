@@ -28,28 +28,25 @@ def get_planes():
     """
     Get airplane list from PiAware endpoint
     """
-    # planes_response = httpx.get(PIAWARE_URI)
-    # airplane_list = planes_response.json().get('aircraft')
+    planes_response = httpx.get(PIAWARE_URI)
+    airplane_list = planes_response.json().get('aircraft')
 
-    with open(file="aircraft.json", mode="r", encoding='UTF-8') as file:
-        # Iterate through the airline code map and insert into the db
-        airplane_list = json.loads(file.read())['aircraft']
-        # Filter flights without a flight number
-        for airplane in airplane_list:
-            if 'flight' in airplane:
-                flight_number = airplane['flight'].strip()
-                # Check the DB for this flight and pass if found, otherwise call AeroAPI
-                if get_flight_record(flight_number):
-                    print(f"Flight found: {flight_number}")
+    # Filter flights without a flight number
+    for airplane in airplane_list:
+        if 'flight' in airplane:
+            flight_number = airplane['flight'].strip()
+            # Check the DB for this flight and pass if found, otherwise call AeroAPI
+            if get_flight_record(flight_number):
+                print(f"Flight found: {flight_number}")
+            else:
+                print(f"Flight not found: {flight_number}")
+                flight_info = get_flight_info(flight_number)
+                print(flight_info)
+                # If AeroAPI returns data, add the flight to the DB, otherwise skip
+                if flight_info:
+                    add_recent_flight(flight_info)
                 else:
-                    print(f"Flight not found: {flight_number}")
-                    flight_info = get_flight_info(flight_number)
-                    print(flight_info)
-                    # If AeroAPI returns data, add the flight to the DB, otherwise skip
-                    if flight_info:
-                        add_recent_flight(flight_info)
-                    else:
-                        pass
+                    pass
 
 def get_airplane_info(airplane_type):
     """
