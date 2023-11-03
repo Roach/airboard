@@ -2,7 +2,7 @@ body {
     background: #000;
     color: #f3f3f3;
     font-family: 'Noto Sans Mono';
-    font-size: 3.5em;
+    font-size: 5.8em;
 }
 .flight {
     width: calc(100% - 20px);
@@ -18,14 +18,47 @@ body {
 }
 .flight p {
     float: left;
-    padding: 10px;
+    padding: 5px;
     margin: 5px;
 }
 .flight img {
     float: left;
-    padding: 10px;
-    margin: 5px;
-    height: 1em;
+    padding: 5px;
+    margin: 10px;
+    height: 1.75em;
+    background-color: #e8e8e8;
+    border-radius: 5%;
+    display:block;
+}
+.flight .flight-number-container {
+    float: left;
+    width:25%;
+    display:block;
+    line-height: 1;
+}
+.flight .flight-number-container .flight-callsign {
+    width: 100%;
+    display:block;
+    font-size: 0.5em;
+    padding: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+.flight .flight-number-container .flight-number {
+    width: 100%;
+    display:block;
+    font-size: 1em;
+    text-align: center;
+}
+.flight .flight-path-container .flight-to {
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: center;
+    color: #e2c000;
+}
+.flight .flight-path-container .flight-origin, .flight .flight-path-container .flight-dest {
+    font-size: 1.85em;
+    line-height: 84%;
 }
 
 .content h1 {

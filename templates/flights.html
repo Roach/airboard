@@ -4,12 +4,16 @@
     <h1><img src="/static/images/flyover.png"/>{% block title %} Recent Flyovers {% endblock %}</h1>
     {% for flight in flights %}
         <div class='flight'>
-            <img src="/static/images/airline_logos/{{ flight['operator_icao'] }}.png"/>
-            <p>{{ flight['operator_callsign'] }}</p>
-            <p>{{ flight['flight_number'] }}</p>
-            <p>{{ flight['origin_iata'] }}</p>
-            <p>to</p>
-            <p>{{ flight['dest_iata'] }}</p>
+            <img class="airline-logo" src="/static/images/airline_logos/{{ flight['operator_icao'] }}.png"/>
+            <div class="flight-number-container">
+                <p class="flight-number">{{ flight['flight_number'] }}</p>
+                <p class="flight-callsign">{{ flight['operator_callsign'] }}</p>
+            </div>
+            <div class="flight-path-container">
+                <p class="flight-origin">{{ flight['origin_iata'] }}</p>
+                <p class="flight-to">✈</p>
+                <p class="flight-dest">{{ flight['dest_iata'] }}</p>
+                </div>
         </div>
     {% endfor %}
 {% endblock %}
